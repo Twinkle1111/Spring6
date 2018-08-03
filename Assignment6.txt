@@ -1,0 +1,93 @@
+1*@GetMapping:
+Ans:@GetMapping is available in package org.springframework.web.bind.annotation.
+it handle the HTTP GET requests matched with given URI.
+eg:@GetMapping("/jdks")
+public String m1()
+{
+return "hello";
+}
+
+2*@PostMapping
+Ans:package org.springframework.web.bind.annotation
+it handles the HTTP Post request matched with given URI.
+eg:
+@PostMapping(path = "/members", consumes = "application/json", produces = "application/json")
+public void addMember() {
+    }
+3*@DeleteMapping
+Ans:@DeleteMapping is available in package org.springframework.web.bind.annotation
+it handle HTTP delete Request
+@DeleteMapping("/{userId}")
+ public String deleteUser(@PathVariable String userId)
+ {
+ }
+
+4*@PutMapping
+Ans:Available in package org.springframework.web.bind.annotation
+It handle HTTp put request.
+eg:
+@PutMapping("/{userId}")
+ public String updateUser(@PathVariable String userId, @RequestBody UserDetailsRequestModel rd)
+ {
+ 
+  
+  return "rd";
+ }
+ 
+
+5*@RequestMapping
+Ans:Available in package org.springframework.web.bind.annotation.
+g:@RequestMapping("/home")
+public class Pallavi 
+{
+}
+2.@RequestMapping with method:
+we can use it in the method to provide the URI.
+EG:@RequestMapping(value="/method")
+@ResponseBody
+public String m1()
+{
+return null;
+}
+3.RequestMapping with multiple URI:
+@RequestMapping(value={"/m1","/m/p"})
+@ResponseBody
+public String B1()
+{
+}
+4.@RequestMapping with HTTP method:
+AS Http parameter has no default we have to specify the value otherwise it will go to any HttpRequest
+eg:@RequestMapping(value="/has/kat",method=post)
+5.RequestMapping with headers:
+we can specify the header which has to invoke in HttpHandler
+eg:@RequestMapping(value="/m4",headers="name=Pallavi")
+@ResponseBody
+public String m1()
+{
+}
+6.@RequestMapping with producers and consumers
+we can use @RequestMapping in produces and consumes variable where we can specify content type of which method will be 
+invoked and the response Content type.
+eg:@RequestMapping(value="/m",produces="/ear/rat",consumes="/fr")
+@ResponseBody
+public String m()
+{
+}
+7.Spring @path variable
+we acn use @RequestMapping in case of @pathVariable annotation through which we can map the URI variable to one of the 
+method argument.
+@RequestMapping(value="/method7/{id}")
+@ResponseBody
+public String method7(@PathVariable("id") int id){
+	return "method7 with id="+id;
+} 
+8.RequestMapping with @RequestParam for URL parameters: 
+sometimes we get the parameters in the request URL eg:GET request
+9.@RequestMapping default method: available in package org.springframework.web.bind.annotation.
+If the value is empty then we have to consider as it's the default method for the Controller Class
+
+6*@PathVariable: Available in package org.springframework.web.bind.annotation
+Ans:@PathVariable annotation is used to identify the pattern that is used in URI for incoming request.
+
+7*@RequestBody:Available in package org.springframework.web.bind.annotation
+Ans:@RequestBody annotation maps the HttpRequest body to a transfer or domain object.
